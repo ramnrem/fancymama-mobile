@@ -1,0 +1,12 @@
+@import 'vars.scss';
+@import 'media.scss';
+@import 'fonts.scss';
+@import 'header.scss';
+
+body {
+	background-color: $bgc;
+	background-image: url('../img/bg.png');
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: 200%;
+}
