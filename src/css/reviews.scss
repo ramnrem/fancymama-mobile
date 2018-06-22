@@ -1,0 +1,63 @@
+.relative {
+	position: relative;
+	overflow: hidden;
+	.reviews {
+		margin-bottom: 20px;
+		.y-circle {
+			position: absolute;
+			top: 60%;
+			left: 70%;
+			background-color: #FFF9D5;
+			border-radius: 100px;
+			width: 152px;
+			height: 152px;
+			z-index: -1;
+		}
+		.reviews-title {
+			h3 {
+				font: {
+					size: 16px;
+					weight: bold;
+					family: Arial;
+				}
+				line-height: 1.8;
+				color: $purple;
+			}
+		}
+		.post-reviews {
+			text-align: center;
+			a {
+				font: {
+					size: 14px;
+					family: Arial;
+				}
+
+				line-height: 1;
+				color: $purple;
+				&:hover {
+					color:#65A601;
+				}
+			}
+		}
+		.last-reviews {
+			.review {
+				background-color: #fff;
+				border: 2px solid #A099C2;
+				border-radius: 25px;
+				padding: 18px 13.5px 30px 13.5px;
+				font-size: 12px;
+				.date-time {
+					margin-bottom: 5px;
+					color: $purple;
+					.date {
+						margin-right: 15px;
+					}
+				}
+				p {
+					margin: 0;
+					color: #000;
+				}
+			}
+		}
+	}
+}
