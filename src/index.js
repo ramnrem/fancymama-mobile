@@ -30,6 +30,23 @@ function autoSlider() {
 	}
 }
 
+let revs = document.getElementsByClassName('review');
+function reviewSlider() {
+	for(let i = 0; i<revs.length; i++){
+		if(revs[i].classList.contains('curRev')){
+			revs[i].classList.remove('curRev')
+			if(i == revs.length-1){
+				revs[0].classList.add('curRev');
+				break;
+			} else {
+				revs[i+1].classList.add('curRev');
+				break;
+			}
+		}
+	}
+}
+
+setInterval(reviewSlider, 4000);
 
 $(document).ready(function() {
 	//Активация меню
