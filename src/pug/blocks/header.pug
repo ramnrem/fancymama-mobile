@@ -1,17 +1,17 @@
 header
 	.container
-		.row
+		.row.justify-content-between
 			.col-2
 				.menu-btn
 					img(src=require('../../img/menu.svg'))
-			.col-8
+			.col-2
+				.basket
+					a(href="#")
+						div.basket-icon
+							span.js-basket-item 3
+		.row
+			.col-12
 				form.search(action="/")
 					input.search-btn(type="submit" value=" ")
 					input.search-input(type="text" placeholder="Поиск по сайту")
-
-			.col-2
-				.basket
-					div.basket-icon
-						span.js-basket-item 3
 include sub-blocks/menu.pug
-

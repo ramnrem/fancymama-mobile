@@ -1,8 +1,8 @@
 @import 'menu.scss';
 
 header {
+	padding-top: 10px; 
 	position: relative;
-	padding-top: 20px;
 	.menu-btn {
 		padding-top: 5px;
 		img {
@@ -21,7 +21,7 @@ header {
 			.js-basket-item {
 				position: absolute;
 				color: $green;
-				font-size: 10px;
+				font-size: 0.625rem;
 				z-index: 2;
 				top: 1px;
 				right: 5px;
@@ -49,7 +49,7 @@ header {
 		}
 		.search-input {
 			color: #A099C1;
-			font-size: 13px;
+			font-size: 0.8125rem;
 			width: 78%;
 			border-radius: 0 30px 30px 0;
 

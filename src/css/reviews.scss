@@ -1,3 +1,5 @@
+@import 'post-review';
+
 .relative {
 	position: relative;
 	overflow: hidden;
@@ -14,6 +16,13 @@
 			z-index: -1;
 		}
 		.reviews-title {
+			a {
+				text-decoration: none;
+				text-decoration-color: $purple;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
 			h3 {
 				font: {
 					size: 16px;
@@ -41,12 +50,15 @@
 		}
 		.last-reviews {
 			.review {
+				display: none;
+				opacity: 0;
 				background-color: #fff;
 				border: 2px solid #A099C2;
 				border-radius: 25px;
 				padding: 18px 13.5px 30px 13.5px;
-				font-size: 12px;
+				font-size: 0.75rem;
 				.date-time {
+					font-family: 'Comfortaa-Bold', sans-serif;
 					margin-bottom: 5px;
 					color: $purple;
 					.date {
@@ -57,6 +69,11 @@
 					margin: 0;
 					color: #000;
 				}
+			}
+			.curRev {
+				display: block;
+				opacity: 1;
+				transition: 0.5s;
 			}
 		}
 	}

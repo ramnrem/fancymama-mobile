@@ -1,0 +1,55 @@
+#js-post-review {
+	width: 100%;
+	background-color: #fff;
+	.menu-back {
+		span {
+			color: $purple;
+			margin-left: 50px;
+			font-size: 1.1rem;
+		}
+	}
+	.star {
+		color: red;
+	}
+	.post-review-form {
+		font-size: 0.9rem;
+		label {
+			width: 100%;
+			color: $purple;
+			input {
+				padding: 3px;
+				font-size: 0.7rem;
+				width: 100%;
+				color: $purple;
+				outline: none;
+				border: 1px solid $purple;
+			}
+		}
+		.img-wrap {
+			border: 1px solid $purple;
+			text-align: center;
+			margin-bottom: 8px;
+			img {
+				margin: 5px;
+			}
+		}
+		button {
+			width: 100%;
+			border: none;
+			border-radius: 15px;
+			background-color: $purple;
+			color: #fff;
+			text-transform: uppercase;
+		}
+	}
+	.form-alert {
+		font-size: 0.8rem;
+		p {
+			margin: 10px 0 0 0;
+		}
+		a {
+			color: $purple;
+			text-decoration: underline;
+		}
+	}
+}
