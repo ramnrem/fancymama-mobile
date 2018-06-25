@@ -1,4 +1,4 @@
-/*import one from "./some.js";*/
+import "./scripts/menu.js";
 let currentSlide = 1;
 let currentArrslide = 1;
 let translateWidth = 0;
@@ -49,46 +49,6 @@ function reviewSlider() {
 setInterval(reviewSlider, 4000);
 
 $(document).ready(function() {
-	//Активация меню
-	$('.menu-btn').click(function(){
-		if($('#js-menu').css('display') === 'none'){
-			$('#js-menu').css('display','block');
-			$('#js-menu').animate({
-				opacity: 1
-			},500);
-		}
-	})
-	//Активация формы отправки отзыва
-	$('.post-reviews').click(function(){
-		if($('#js-post-review').css('display') === 'none'){
-			$('#js-post-review').css('display','block');
-			$('#js-post-review').animate({
-				opacity: 1
-			},500);
-		}
-	})
-	//Деактивация
-	$('.back-btn').click(function(){
-		if($('#js-menu').css('display') === 'block'){
-			$('.menu-wrapper').animate({
-				opacity: 0
-			},500,function(){
-				$('.menu-wrapper').css('display','none');
-			});
-		} else if($('#js-post-review').css('display') === 'block'){
-			$('.menu-wrapper').animate({
-				opacity: 0
-			},500,function(){
-				$('.menu-wrapper').css('display','none');
-			});
-		}
-	})
-	// --
-
-	//Слайдер последних отзывов
-
-	// --
-
 	$('.left-arr').click(function(){
 		if (currentArrslide == 1) {
 			translateWidth = -$('.arrslider-container').width() * (arrSlideCounter - 1)

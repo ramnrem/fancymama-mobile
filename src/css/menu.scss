@@ -2,12 +2,12 @@
 	position: fixed;
 	background-color: #FBFBFF;
     top: 0;
-    left: 0;
+    left: -100%;
     opacity: 0;
     width: 270px;
     height: 100%;
     z-index: 1000;
-    display: none;
+    transition: .5s;
     .menu-back {
     	margin-bottom: 45px;
 		.back-btn {
@@ -67,8 +67,8 @@
 		}
 	}
 }
-.menu-opened {
+.menu-open {
+	left: 0;
 	display: block;
-	overflow-x: hidden;
-	overflow-y: scroll;
+	opacity: 1;
 }
