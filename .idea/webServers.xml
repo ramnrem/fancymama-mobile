@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="1f4d3e7f-8519-46a3-ba92-03af6700592c" name="fancymfma-mobile" url="http://infodi19.beget.tech">
+        <fileTransfer host="infodi19.beget.tech" port="21" rootFolder="/htmlfancymama.diamis.ru/public_html">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

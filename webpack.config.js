@@ -6,6 +6,10 @@ let UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 let ImageminWebpackPlugin = require('imagemin-webpack-plugin');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
 
+
+let ExtractStyle = ExtractTextPlugin;
+
+
 let conf = {
 	mode: process.env.NODE_ENV || 'development',
 	entry: [
@@ -14,8 +18,7 @@ let conf = {
 	],
 	output: {
 		path: path.resolve(__dirname, './dist'),
-		filename: 'main.js',
-		/*publicPath: 'dist/'*/
+		filename: '../../fancy-mama.loc/public_html/common/htdocs/mobile/js/main.js',
 	},
 	watch: true,
 	module: {
@@ -26,7 +29,7 @@ let conf = {
 			},
 			{
 				test: /\.scss$/, 
-				use: ExtractTextPlugin.extract({
+				use: ExtractStyle.extract({
 					fallback: 'style-loader',
 					use: [
 						{
@@ -41,6 +44,8 @@ let conf = {
 				})
 				
 			},
+
+
 			{
 				test: /\.pug$/,
 				loader: 'pug-loader',
@@ -48,44 +53,61 @@ let conf = {
 					pretty: true
 				}
 			},
+
+
 			{
 				test: /\.html$/,
 				use: ['html-loader']
 			},
+			
+
 			{
 				test: /\.(png|jpe?g|svg)$/, 
-				use: [
-					{
-						loader: 'file-loader',
-						options: {
-							name: '[name].[ext]',
-							outputPath: 'img/',
-							publicPath: 'img/'
-						}
+				use: [{
+					loader: 'file-loader',
+					options: { 
+						name: '[name].[ext]',
+						outputPath: '../../fancy-mama.loc/public_html/common/htdocs/mobile/img/',
+						publicPath: 'img/'
 					}
-				]
-				
+				}]
 			},
+
+
 			{
 				test: /\.(woff(2)?|ttf|eot|otf)(\?v=\d+\.\d+\.\d+)?$/,
 				use: [{
 					loader: 'file-loader',
-					options: {
+					options: { 
 						name: '[name].[ext]',
-						outputPath: 'fonts/'
+						outputPath: '../../fancy-mama.loc/public_html/common/htdocs/mobile/fonts/',
+						publicPath: 'fonts/'
 					}
 				}]
 			}
 		],
 	},
 	plugins: [
-		new ExtractTextPlugin('app.css'),
-		new CleanWebpackPlugin(['dist']),
+		// RELIZE
+		new CleanWebpackPlugin([
+			'dist',
+			// '../../fancy-mama.loc/public_html/common/htdocs/mobile/css',
+			// '../../fancy-mama.loc/public_html/common/htdocs/mobile/fonts',
+			// '../../fancy-mama.loc/public_html/common/htdocs/mobile/images',
+		]),
+		new ExtractStyle('../../fancy-mama.loc/public_html/common/htdocs/mobile/style.css'),
+		// THE END 
+
+
+		new ExtractStyle('app.css'),
 		new HtmlWebpackPlugin({
 			template: 'src/pug/index.pug'
 		})
 	]
 };
+
+
+
 
 module.exports = (env, options) => {
 	
