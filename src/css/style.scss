@@ -6,6 +6,8 @@
 @import 'reviews.scss';
 @import 'novelties.scss';
 @import 'footer.scss';
+@import 'catalog-page-header.scss';
+@import 'catalog-page-content.scss';
 
 
 body {
@@ -15,4 +17,13 @@ body {
 	background-position: top;
 	background-repeat: no-repeat;
 	background-size: 200%;
+	.no-r-padding {
+		padding-right: 0; 
+	}
+	.no-l-padding {
+		padding-left: 0; 
+	}
+	.no-padding {
+		padding: 0;
+	}
 }

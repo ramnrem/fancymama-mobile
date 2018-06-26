@@ -1,0 +1,84 @@
+header {
+	padding-top: 10px; 
+	position: relative;
+	.icon-margin {
+		margin-bottom: 15px;
+	}
+	.menu-btn {
+		padding-top: 5px;
+		img {
+			width: 20px;
+			height: 18px;
+		}
+	}
+	.basket {
+		display: flex;
+		justify-content: flex-end;
+		padding-top: 5px;
+		.basket-icon {
+			position: relative;
+			width: 30px;
+			height: 33px;
+			background-image: url(../img/basket.svg);
+			background-repeat: no-repeat;
+			.js-basket-item {
+				position: absolute;
+				color: $green;
+				font-size: 0.625rem;
+				z-index: 2;
+				top: 1px;
+				right: 5px;
+			}
+		}
+	}
+	.back-arrow {
+		width: 20px;
+    	height: 18px;
+    	display: inline-block;
+    	vertical-align: middle;
+	}
+	.search {
+		display: inline-block;
+		width:100%;
+		padding: 0;
+		border-radius: 50px;
+		border: 2px solid #A099C1;
+		background-color: #fff;
+		input {
+			//font-size: 0.6125rem;
+			border: none;
+			outline: none;
+		}
+		.search-btn {
+			background-image: url(../img/search.svg);
+			background-repeat: no-repeat;
+			background-color: #fff;
+			background-position: center;
+			width: 30px;
+			background-size: 65%;
+			border-radius: 30px 0 0 30px;
+		}
+		.search-input {
+			vertical-align: middle;
+			color: #A099C1;
+			font-size: 0.6125rem;
+			width: 78%;
+			border-radius: 0 30px 30px 0;
+
+		}
+	}
+	.filter-link {
+		display: flex;
+		justify-content: flex-end;
+		text-transform: lowercase;
+		vertical-align: center;
+		height: 100%;
+		font-size: 0.6125rem;
+		a {
+			align-self: center;
+			font-family: "Comfortaa-Bold";
+			color: $purple;
+			cursor: poiner;
+		}
+	}
+}

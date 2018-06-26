@@ -1,15 +1,10 @@
 .menu-wrapper {
-	position: fixed;
+	position: relative;
 	background-color: #FBFBFF;
-    top: 0;
-    left: -100%;
-    opacity: 0;
-    width: 270px;
-    height: 100%;
-    z-index: 1000;
-    transition: .5s;
-    .menu-back {
-    	margin-bottom: 45px;
+	width: 270px;
+	min-height: 100%;
+	.menu-back {
+		margin-bottom: 45px;
 		.back-btn {
 			background-color: #fff;
 			width: 45px;
@@ -31,15 +26,18 @@
 			border: 2px solid #A099C1;
 			background-color: #FBFBFF;
 			outline: none;
+			cursor: pointer;
 
 			img {
 				text-align: center;
 				width: 15px;
 				height: 30px;
 			}
-			span {
+			.call-number {
 				vertical-align: middle;
 				margin: 0 30px 0 15px;
+				color: #A099C1;
+				text-decoration: none;
 			}
 			&:hover {
 				border: 2px solid #756CBC;
@@ -49,6 +47,7 @@
 	}
 	nav.menu {
 		ul {
+			margin-bottom: 0;
 			list-style: none;
 			padding: 0 20px;
 			li {
@@ -59,6 +58,7 @@
 				a {
 					text-decoration: none;
 					color: #646173;
+					cursor: pointer;
 					&:hover {
 						color: #65A601
 					}
@@ -66,6 +66,19 @@
 			}
 		}
 	}
+}
+.menu-bg {
+	z-index: 1000;
+	opacity: 0;
+	position: fixed;
+	background-color: rgba(0,0,0,.5);
+	width: 100%;
+	height: 100%;
+	top:0;
+	left: -100%;
+	overflow: hidden;
+	overflow-y: scroll;
+	transition: .25s;
 }
 .menu-open {
 	left: 0;

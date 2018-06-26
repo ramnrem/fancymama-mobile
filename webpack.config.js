@@ -82,7 +82,15 @@ let conf = {
 		new ExtractTextPlugin('app.css'),
 		new CleanWebpackPlugin(['dist']),
 		new HtmlWebpackPlugin({
-			template: 'src/pug/index.pug'
+			filename: 'index.html',
+			template: 'src/pug/index.pug',
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'catalog.html',
+			template: 'src/pug/catalog.pug',
+		}),
+		new webpack.ProvidePlugin({
+			noUiSlider: 'nouislider'
 		})
 	]
 };
