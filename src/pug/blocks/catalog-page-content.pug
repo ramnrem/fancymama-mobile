@@ -1,0 +1,53 @@
+.container
+	a(href="#").js-catalog-menu
+		.catalog-border
+			span.catalog-link Каталог товаров
+	
+	.category-slider
+		ul
+			li
+				a(href="#") Санки-коляски
+			li
+				a(href="#") Детские коляски-коляски 3 в 1
+			li
+				a(href="#") Санки-коляски
+	.sortby
+		ul
+			li
+				span Сортировать по:
+			li
+				a(href="#") Цена
+			li
+				a(href="#") Наименование
+			li
+				a(href="#") Артикул
+	.row.justify-content-center
+		.goods-cards
+			.col-12
+				.card
+					h3.card-title Трехколесный велосипед Puky Fitsch (Пуки Фитч)
+					img.card-image(src=require('../../img/bike.png'))
+					span.card-price 5790 руб
+					.card-buy
+						a(href="#") Купить
+					img.bird(src=require('../../img/bird.png'))
+			.col-12
+				.card
+					h3.card-title Трехколесный велосипед Puky Fitsch (Пуки Фитч)
+					img.card-image(src=require('../../img/bike.png'))
+					span.card-price 5790 руб
+					.card-buy.card-buy-green
+						a(href="#") Купить
+					img.bird(src=require('../../img/bird.png'))
+	.row.justify-content-center
+		.col-12
+			.page-num
+				ul
+					li.cur-page
+						a(href="#")
+							span 1
+					li
+						a(href="#") 2
+					li
+						a(href="#") 3
+	#slider

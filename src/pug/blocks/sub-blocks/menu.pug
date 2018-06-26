@@ -1,28 +1,30 @@
-
-#js-menu.menu-wrapper
-	.menu-back
-		button.back-btn
-			img(src=require('../../../img/back_arrow.svg'))
-	.menu-call
-		button.call-btn
-			img(src=require('../../../img/call.svg'))
-			span.call-number +7 (812) 929-83-98
-	nav.menu
-		ul
-			li
-				a(href="") Главная
-			li
-				a(href="") О магазине
-			li
-				a(href="") FAQ
-			li
-				a(href="") Каталог
-			li
-				a(href="") Оплата и доставка
-			li
-				a(href="") Новости
-			li
-				a(href="") Статьи
-			li
-				a(href="") Контакты
-			
+#js-menu.menu-bg
+	.menu-wrapper
+		.menu-back
+			button.back-btn
+				img(src=require('../../../img/back_arrow.svg'))
+		.menu-call
+			a(href="tel:78129298398")
+				button.call-btn
+					img(src=require('../../../img/call.svg'))
+					span.call-number +7 (812) 929-83-98
+					
+		nav.menu
+			ul
+				li
+					a(href="") Главная
+				li
+					a(href="") О магазине
+				li
+					a(href="") FAQ
+				li
+					a(href="") Каталог
+				li
+					a(href="") Оплата и доставка
+				li
+					a(href="") Новости
+				li
+					a(href="") Статьи
+				li
+					a(href="") Контакты
+		

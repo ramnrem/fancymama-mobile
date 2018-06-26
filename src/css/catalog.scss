@@ -1,17 +1,4 @@
 .catalog {
-	.catalog-border {
-		border-radius: 50px;
-		margin: 15px 0;
-		background-color: $purple;
-		text-align: center;
-		padding: 5px;
-		.catalog-link {
-			text-decoration: none;
-			font-size: 1.1rem;
-			color: #fff;
-			transition-timing-function: ease-in-out;
-		}
-	}
 	.slider-container {
 		width: 100%;
 		border-radius: 3px;
@@ -38,5 +25,19 @@
 				}
 			}
 		}
+	}
+}
+
+.catalog-border {
+	border-radius: 50px;
+	margin: 15px 0;
+	background-color: $purple;
+	text-align: center;
+	padding: 3px 0;
+	.catalog-link {
+		text-decoration: none;
+		font-size: 1.1rem;
+		color: #fff;
+		transition-timing-function: ease-in-out;
 	}
 }

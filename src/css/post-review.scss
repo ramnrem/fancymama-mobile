@@ -23,6 +23,9 @@
 				color: $purple;
 				outline: none;
 				border: 1px solid $purple;
+				&[type="textarea"] {
+					height: 100px;
+				}
 			}
 		}
 		.img-wrap {
