@@ -101,6 +101,10 @@ let conf = {
 			filename: 'basket.html',
 			template: 'src/pug/basket.pug',
 		}),
+		new HtmlWebpackPlugin({
+			filename: 'product-card.html',
+			template: 'src/pug/product-card.pug',
+		}),
 		new webpack.ProvidePlugin({
 			noUiSlider: 'nouislider'
 		})

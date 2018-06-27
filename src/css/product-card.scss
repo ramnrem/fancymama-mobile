@@ -1,0 +1,147 @@
+.alignitems {
+	.back-arrow {
+		img {
+			vertical-align: baseline;
+		}
+	}
+}
+.art-link {
+	text-transform: none !important;
+}
+
+.card-lside {
+	padding-left: 0;
+	margin-left: 15px;
+}
+
+.product-card-wrap {
+	margin-top: 10px;
+	.product-card {
+		background-color: #fff;
+		border-radius: 25px;
+		.slider {
+			padding-top: 35px;
+			margin-bottom: 40px;
+		}
+		form {
+			padding: 0 15px;
+		}
+		&-title {
+			color: $green;
+			font-size: 1rem;
+			margin-bottom: 15px;
+		}
+		&-price {
+			color: #646173;
+			font-size: 1.2857rem;
+		}
+		&-mf {
+			margin: 15px 0 0 0;
+		
+			font-size: 0.8571rem;
+			color: #646173;
+		}
+		a {
+			font-size: 0.8571rem;
+			text-decoration: underline;
+			color: $purple;
+		}
+		label.lab {
+			font-size: 0.8571rem;
+
+		}
+		#offer-options {
+			background-color: #D6D3F0;
+			border: 1px solid #BCB7E2;
+			border-radius: 15px;
+			font-size: 0.7142rem;
+			color: #000;
+			width: 60%;
+			outline: none;
+			margin-top: 15px;
+			padding: 0 5px;
+		}
+		&-button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 65px;
+			background: url('../img/order_bg.png') no-repeat center;
+
+			button {
+				outline: none;
+				background-color: $green;
+				border: none;
+				border-radius: 20px;
+				color: #fff;
+				padding: 3px 25px;
+			}
+		}
+	}
+
+	.with-similar-title {
+		font-family: "Comfortaa-Bold";
+		text-align: center;
+		margin:20px 0 11px 0;
+		a {
+			border-radius: 20px;
+			background-color: $purple;
+			font-size: 1rem;
+			color: #fff;
+			padding: 5px 10px;
+		}
+	}
+	.similar {
+		.with-similar-title {
+			a {
+				background-color: $green;
+			}
+		}
+	}
+	.sl-mr:last-child {
+		margin-bottom: 25px;
+	}
+	.desc-rev {
+		margin-top: 20px;
+		.tabs {
+			font-size: 0.875rem;
+			color: #fff;
+			position: relative;
+			top: 0;
+			z-index: 1;
+			.tab {
+				transition: .5s;
+				background-color: $purple;
+				padding: 5px 6px 8px 22px;
+				margin: 0 5px 0 6px;
+				border-radius: 15px 15px 0 0;
+			}
+			.cur-tab {
+				background-color: $green;
+			}
+		}
+		.desc-rev-content {
+			position: relative;
+			display: none;
+			z-index: 5;
+			font-size: 0.7142rem;
+			padding: 15px;
+			background-color: #fff;
+			border: 2px solid #A099C2;
+			border-radius: 20px;
+			&-date {
+				color: $purple;
+			}
+			&-text {
+				margin-top: 5px;
+				color: #000;
+			}
+		}
+		.tab-none {
+			display: none;
+		}
+		.cur-tab-cont {
+			display: block;
+		}
+	}
+}
