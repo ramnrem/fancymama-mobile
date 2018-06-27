@@ -2,21 +2,24 @@ html(lang="en")
 	include includes/head.pug
 body
 	include blocks/catalog-menu-page-header.pug
-
 	.container
-		.filter-wrap
-			form(action="/")
-				.filter-price
-					| nouislider
-				.filter-brand
-					| nouislider
-				.filter-weight
-					| nouislider
-				.filter-age
-					| nouislider
-				.filter-size
-					| nouislider
-				button Найти
+		#slider
+
+	//- .container
+	//- 	.filter-wrap
+	//- 		form(action="/")
+	//- 			.filter-price
+	//- 				| nouislider
+
+	//- 			.filter-brand
+	//- 				| nouislider
+	//- 			.filter-weight
+	//- 				| nouislider
+	//- 			.filter-age
+	//- 				| nouislider
+	//- 			.filter-size
+	//- 				| nouislider
+	//- 			button Найти
 
 
 	include blocks/footer.pug
