@@ -1,40 +1,77 @@
-.cat-menu
-		.cat-menu-top
-		.wrap
-			.cat-menu-content
-				ul#cat-menu
-					li
-						span Пункт меню 1
-						ul
-							li
-								a(href='') подпункт 1
-							li
-								a(href='') подпункт 2
-							li
-								a(href='') подпункт 3
-							li
-								a(href='') подпункт 4
-							li
-								a(href='') подпункт 5
-					li
-						span Пункт меню 2
-						ul
-							li
-								a(href='') подпункт 1
-							li
-								a(href='') подпункт 2
-							li
-								a(href='') подпункт 3
-							li
-								a(href='') подпункт 4
-							li
-								a(href='') подпункт 5
-					li
-						span Пункт меню 3
-						ul
-							li
-								a(href='') подпункт 1
-							li
-								a(href='') подпункт 2
-							li
-								a(href='') подпункт 3
+html(lang="en")
+	include includes/head.pug
+body
+	include blocks/catalog-menu-page-header.pug
+	
+	.container
+		.cat-menu
+			.cat-menu-top
+			.wrap
+				.cat-menu-content
+					ul#cat-menu
+						li.cat-menu-item
+							span Пункт меню 1
+							ul
+								li
+									a(href='') подпункт 1
+								li
+									a(href='') подпункт 2
+								li
+									a(href='') подпункт 3
+								li
+									a(href='') подпункт 4
+								li
+									a(href='') подпункт 5
+						li.cat-menu-item
+							span Пункт меню 2
+							ul
+								li
+									a(href='') подпункт 1
+								li
+									a(href='') подпункт 2
+								li
+									a(href='') подпункт 3
+								li
+									a(href='') подпункт 4
+								li
+									a(href='') подпункт 5
+						li.cat-menu-item
+							span Пункт меню 3
+							ul
+								li
+									a(href='') подпункт 1
+								li
+									a(href='') подпункт 2
+								li
+									a(href='') подпункт 3
+						li.cat-menu-item
+							span Пункт меню 3
+							ul
+								li
+									a(href='') подпункт 1
+								li
+									a(href='') подпункт 2
+								li
+									a(href='') подпункт 3
+						li.cat-menu-item
+							span Пункт меню 3
+							ul
+								li
+									a(href='') подпункт 1
+								li
+									a(href='') подпункт 2
+								li
+									a(href='') подпункт 3
+						li.cat-menu-item
+							span Пункт меню 3
+							ul
+								li
+									a(href='') подпункт 1
+								li
+									a(href='') подпункт 2
+								li
+									a(href='') подпункт 3
+
+	include blocks/footer.pug
+
+	include includes/scripts.pug

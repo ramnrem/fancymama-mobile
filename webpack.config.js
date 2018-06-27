@@ -89,6 +89,10 @@ let conf = {
 			filename: 'catalog.html',
 			template: 'src/pug/catalog.pug',
 		}),
+		new HtmlWebpackPlugin({
+			filename: 'catalog-menu.html',
+			template: 'src/pug/catalog-menu.pug',
+		}),
 		new webpack.ProvidePlugin({
 			noUiSlider: 'nouislider'
 		})

@@ -1,0 +1,24 @@
+header
+	.container
+		.row.justify-content-between.icon-margin
+			.col-2
+				.menu-btn
+					img(src=require('../../img/menu.svg'))
+			.col-2
+				.basket
+					a(href="#")
+						div.basket-icon
+							span.js-basket-item 3
+		.row
+			.col-2.no-r-padding
+				a(href="catalog.html")
+					.back-arrow
+						a(href="catalog.html")
+							img(src=require('../../img/back_arrow.svg'))
+			.col-8.no-l-padding
+				form.search(action="/")
+					input.search-btn(type="submit" value=" ")
+					input.search-input(type="text" placeholder="Поиск по сайту")
+			.col-2.no-l-padding
+				.filter-link
+					a(href="#") Фильтр
