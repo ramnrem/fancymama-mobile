@@ -18,7 +18,8 @@ let conf = {
 	],
 	output: {
 		path: path.resolve(__dirname, './dist'),
-		filename: '../../fancy-mama.loc/public_html/common/htdocs/mobile/js/main.js',
+		filename: 'js/main.js',
+		// filename: '../../fancy-mama.loc/public_html/common/htdocs/mobile/js/main.js',
 	},
 	watch: true,
 	module: {
@@ -27,6 +28,22 @@ let conf = {
 				test: /\. js$/,
 				loader: 'babel-loader'
 			},
+            {
+                test: /\.css$/,
+                use: ExtractStyle.extract({
+                    fallback: 'style-loader',
+                    use: [
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                url: true
+                            }
+                        },
+                        'postcss-loader'
+                    ]
+                })
+
+            },
 			{
 				test: /\.scss$/, 
 				use: ExtractStyle.extract({
@@ -67,7 +84,8 @@ let conf = {
 					loader: 'file-loader',
 					options: { 
 						name: '[name].[ext]',
-						outputPath: '../../fancy-mama.loc/public_html/common/htdocs/mobile/img/',
+						outputPath: 'img/',
+						// outputPath: '../../fancy-mama.loc/public_html/common/htdocs/mobile/img/',
 						publicPath: 'img/'
 					}
 				}]
@@ -80,7 +98,8 @@ let conf = {
 					loader: 'file-loader',
 					options: { 
 						name: '[name].[ext]',
-						outputPath: '../../fancy-mama.loc/public_html/common/htdocs/mobile/fonts/',
+						outputPath: 'fonts/',
+						// outputPath: '../../fancy-mama.loc/public_html/common/htdocs/mobile/fonts/',
 						publicPath: 'fonts/'
 					}
 				}]
@@ -95,8 +114,8 @@ let conf = {
 			// '../../fancy-mama.loc/public_html/common/htdocs/mobile/fonts',
 			// '../../fancy-mama.loc/public_html/common/htdocs/mobile/images',
 		]),
-		new ExtractStyle('../../fancy-mama.loc/public_html/common/htdocs/mobile/style.css'),
-		// THE END 
+		// new ExtractStyle('../../fancy-mama.loc/public_html/common/htdocs/mobile/style.css'),
+		// THE END
 
 
 		new ExtractStyle('app.css'),
@@ -125,7 +144,8 @@ let conf = {
 			template: 'src/pug/product-card.pug',
 		}),
 		new webpack.ProvidePlugin({
-			noUiSlider: 'nouislider'
+            $: 'jquery',
+            jQuery: 'jquery',
 		})
 	]
 };
