@@ -42,6 +42,21 @@ let conf = {
 				
 			},
 			{
+				test: /\.css$/,
+				use: ExtractTextPlugin.extract({
+					fallback: 'style-loader',
+					use: [
+						{
+							loader: 'css-loader',
+							options: {
+								url: true
+							}
+						},
+						'postcss-loader'
+					]
+				})
+			},
+			{
 				test: /\.pug$/,
 				loader: 'pug-loader',
 				options: {
@@ -104,9 +119,6 @@ let conf = {
 		new HtmlWebpackPlugin({
 			filename: 'product-card.html',
 			template: 'src/pug/product-card.pug',
-		}),
-		new webpack.ProvidePlugin({
-			noUiSlider: 'nouislider'
 		})
 	]
 };

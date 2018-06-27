@@ -1,3 +1,86 @@
-#slider {
-	margin: 100px 0;
+.filter-wrap {
+	.to,
+	.from {
+		width: 65px;
+		height: 20px;
+		outline: none;
+		border: 1px solid $purple;
+		padding: 3px 0 0 10px;
+		font-size: 0.8571rem;
+		color: $purple;
+	}
+	.filter {
+		margin-top: 30px;
+		.filter-between {
+			margin-top: 10px;
+			display: flex;
+			justify-content: space-between;
+			label {
+				margin: 0 10px 15px 0;
+				font: {
+					size: 1rem;
+					family: "Comfortaa-Bold";
+				}
+			}
+		}
+	}
+	.filter-brand {
+		.filter-brand-select {
+			width: 100%;
+			padding: 1px 0;
+			border: 1px solide #BCB7E2;
+			border-radius: 6px;
+			background-color: #D6D3F0;
+			color: $purple;
+			font-size: 0.8571rem;
+			outline: none;
+		}
+	}
+	.filter-title {
+		font: {
+			size: 1rem;
+			family: "Comfortaa-Bold";
+		}
+	}
+	.filter-find {
+		margin: 37px 0 41px 0;
+		text-align: center;
+		&-button {
+			border: none;
+			border-radius: 30px;
+			outline: none;
+			cursor: pointer;
+			color: #fff;
+			background-color: $green;
+			text-align: center;
+			padding: 6px 25px;
+		}
+	}
+}
+
+.noUi-connect {
+	background-color: $green;
+}
+.noUi-target {
+	border: none;
+	box-shadow: none;
+	background-color: #fff;
+}
+.noUi-horizontal {
+	height: 2.5px;
+	.noUi-handle {
+		border: none;
+		width: 15px;
+		height: 15px;
+		border-radius: 50px;
+		box-shadow: none;
+		right: -8px !important;
+		background-color: $purple;
+		&:before {
+			content: none;
+		}
+		&:after {
+			content: none;
+		}
+	}
 }

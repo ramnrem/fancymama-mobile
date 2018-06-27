@@ -3,23 +3,58 @@ html(lang="en")
 body
 	include blocks/catalog-menu-page-header.pug
 	.container
-		#slider
 
-	//- .container
-	//- 	.filter-wrap
-	//- 		form(action="/")
-	//- 			.filter-price
-	//- 				| nouislider
 
-	//- 			.filter-brand
-	//- 				| nouislider
-	//- 			.filter-weight
-	//- 				| nouislider
-	//- 			.filter-age
-	//- 				| nouislider
-	//- 			.filter-size
-	//- 				| nouislider
-	//- 			button Найти
+	.container
+		.filter-wrap
+			form(action="/")
+				.filter-price.filter
+					span.filter-title Цена
+					.filter-between
+						.filter-between-from
+							label(for="price-from") от
+							input.price-from.from(type="text")
+						.filter-between-to
+							label(for="price-to") до
+							input.price-to.to(type="text")
+					.nouislider
+				.filter-brand.filter
+					span.filter-title Бренд
+					select.filter-brand-select
+						option.filter-brand-select-option Первый бренд
+						option.filter-brand-select-option Второй
+				.filter-weight.filter
+					span.filter-title Вес
+					.filter-between
+						.filter-between-from
+							label(for="weight-from") от
+							input.weight-from.from(type="text")
+						.filter-between-to
+							label(for="weight-to") до
+							input.weight-to.to(type="text")
+					.nouislider
+				.filter-age.filter
+					span.filter-title Возраст ребенка
+					.filter-between
+						.filter-between-from
+							label(for="age-from") от
+							input.age-from.from(type="text")
+						.filter-between-to
+							label(for="age-to") до
+							input.age-to.to(type="text")
+					.nouislider
+				.filter-size.filter
+					span.filter-title Размер люльки
+					.filter-between
+						.filter-between-from
+							label(for="size-from") от
+							input.size-from.from(type="text")
+						.filter-between-to
+							label(for="size-to") до
+							input.size-to.to(type="text")
+					.nouislider
+				.filter-find
+					button.filter-find-button Найти
 
 
 	include blocks/footer.pug
