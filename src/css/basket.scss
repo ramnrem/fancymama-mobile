@@ -7,9 +7,21 @@
 	}
 }
 .basket-wrapper {
+	position: relative;
 	background-color: #fff;
 	border-radius: 20px;
 	padding-bottom: 10px;
+	margin-bottom: 25px;
+	.y-circle {
+		width: 152px;
+		height: 152px;
+		background-color: #FFF9D5;
+		position: absolute;
+		border-radius: 100px;
+		z-index: -1;
+		left: 70%;
+		top: 20%;
+	}
 	&-parameters {
 		display: flex;
 		justify-content: space-between;
