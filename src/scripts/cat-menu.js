@@ -13,7 +13,7 @@ $(document).ready(function() {
 	});
 });
 
-var slider = document.getElementById('slider');
+/*var slider = document.getElementById('slider');
 
 noUiSlider.create(slider, {
 	start: [20, 80],
@@ -22,4 +22,4 @@ noUiSlider.create(slider, {
 		'min': 0,
 		'max': 100
 	}
-});
+});*/

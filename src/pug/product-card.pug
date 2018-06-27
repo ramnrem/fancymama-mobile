@@ -1,0 +1,135 @@
+html(lang="en")
+	include includes/head.pug
+body
+	header
+		.container
+			.row.justify-content-between.icon-margin
+				.col-2
+					.menu-btn
+						img(src=require('../img/menu.svg'))
+				.col-2
+					.basket
+						a(href="basket.html")
+							div.basket-icon
+								span.js-basket-item 3
+			.row
+				.col-2.no-r-padding.alignitems
+					a(href="catalog.html")
+						.back-arrow
+							img(src=require('../img/back_arrow.svg'))
+				.col-8
+				.col-2.no-l-padding
+					.filter-link.art-link
+						a(href="#") Aрт:0212
+	include blocks/sub-blocks/menu.pug
+
+	.container
+		.product-card-wrap
+			.product-card
+				.slider
+					//- нормальный слайдер
+					.container
+						.row
+							.col-12
+								.row
+									.col-3.side
+										img.left-arr(src=require('../img/left.svg'))
+
+									.col-6.side
+										.arrslider-container.js-arrslider-container
+											ul.arrslider-wrapper.js-arrslider-wrapper
+												li.arrslider-item.js-arrslider-item
+													a(href="#")
+														img.arrslider-img(src=require('../img/velo.svg'))
+												li.arrslider-item
+													a(href="#")
+														img.arrslider-img(src=require('../img/velo.svg'))
+									.col-3.side
+										img.right-arr(src=require('../img/right.svg'))
+					//- нормальный слайдер / конец
+				form(action="/") 
+					h3.product-card-title Трехколесный велосипед Puky Fitsch (Пуки Фитч)
+					span.product-card-price 5790р.
+					p.product-card-mf Производитель: 
+						a(href="#") UPPAbaby
+					a(href="#") Гарантия и возврат товара 
+					br
+					label.lab(for="offer-options") Опции цены
+					select#offer-options
+						option При покупке с коляской
+						option При покупке без коляски
+					.product-card-button
+						button Купить
+			.desc-rev
+				.tabs
+					span.tab.tab-desc.cur-tab Описание
+					span.tab.tab-rev Отзывы
+				.desc-rev-content.tab-rev-cont
+					span.desc-rev-content-date 07 июня 2016 12:06
+					p.desc-rev-content-text Отзыв ipsum dolor sit amet, consectetur adipisicing elit. Earum cumque sit iusto sunt! Iusto asperiores nobis, quidem, aliquam expedita aperiam nihil provident alias maxime temporibus amet consectetur odio saepe. Voluptatibus!
+				.desc-rev-content.tab-desc-cont.cur-tab-cont
+					span.desc-rev-content-date 07 июня 2016 12:06
+					p.desc-rev-content-text Описание ipsum dolor sit amet, consectetur adipisicing elit. Earum cumque sit iusto sunt! Iusto asperiores nobis, quidem, aliquam expedita aperiam nihil provident alias maxime temporibus amet consectetur odio saepe. Voluptatibus!
+
+			.withthis
+				.with-similar-title
+					a(href="#") С этим таварот покупают
+				//- нормальный слайдер
+				.container
+					.row
+						.col-12
+							.row.border.sl-mr
+									.col-3.side
+										img.left-arr(src=require('../img/left.svg'))
+
+									.col-6.side
+										.arrslider-container.js-arrslider-container
+											ul.arrslider-wrapper.js-arrslider-wrapper
+												li.arrslider-item.js-arrslider-item
+													a(href="#")
+														img.arrslider-img(src=require('../img/velo.svg'))
+														a.arrslider-link(href="") Трехколесный велосипед Puky Fitsch (Пуки Фитч)
+														br
+														span.arrslider-price 5790 руб.
+												li.arrslider-item
+													a(href="#")
+														img.arrslider-img(src=require('../img/velo.svg'))
+														a.arrslider-link(href="") Трехколесный велосипед Puky Fitsch (Пуки Фитч)
+														br
+														span.arrslider-price 5790 руб.
+									.col-3.side
+										img.right-arr(src=require('../img/right.svg'))
+				//- нормальный слайдер / конец
+			.similar
+				.with-similar-title
+					a(href="#") Похожие товары
+				//- нормальный слайдер
+				.container
+					.row
+						.col-12
+							.row.border.sl-mr
+									.col-3.side
+										img.left-arr(src=require('../img/left.svg'))
+
+									.col-6.side
+										.arrslider-container.js-arrslider-container
+											ul.arrslider-wrapper.js-arrslider-wrapper
+												li.arrslider-item.js-arrslider-item
+													a(href="#")
+														img.arrslider-img(src=require('../img/velo.svg'))
+														a.arrslider-link(href="") Трехколесный велосипед Puky Fitsch (Пуки Фитч)
+														br
+														span.arrslider-price 5790 руб.
+												li.arrslider-item
+													a(href="#")
+														img.arrslider-img(src=require('../img/velo.svg'))
+														a.arrslider-link(href="") Трехколесный велосипед Puky Fitsch (Пуки Фитч)
+														br
+														span.arrslider-price 5790 руб.
+									.col-3.side
+										img.right-arr(src=require('../img/right.svg'))
+				//- нормальный слайдер / конец
+
+	include blocks/footer.pug
+
+	include includes/scripts.pug

@@ -108,6 +108,22 @@ let conf = {
 			filename: 'catalog.html',
 			template: 'src/pug/catalog.pug',
 		}),
+		new HtmlWebpackPlugin({
+			filename: 'catalog-menu.html',
+			template: 'src/pug/catalog-menu.pug',
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'filter.html',
+			template: 'src/pug/filter.pug',
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'basket.html',
+			template: 'src/pug/basket.pug',
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'product-card.html',
+			template: 'src/pug/product-card.pug',
+		}),
 		new webpack.ProvidePlugin({
 			noUiSlider: 'nouislider'
 		})

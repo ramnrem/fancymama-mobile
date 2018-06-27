@@ -1,6 +1,8 @@
 import "./scripts/menu.js";
 import "./scripts/cat-menu.js";
 import "./scripts/basket.js";
+import "./scripts/product-card.js";
+
 let currentSlide = 1;
 let currentArrslide = 1;
 let translateWidth = 0;

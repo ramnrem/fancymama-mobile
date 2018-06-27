@@ -1,0 +1,51 @@
+html(lang="en")
+	include includes/head.pug
+body
+	include blocks/basket-page-header.pug
+
+	.container.overhidden
+		.basket-wrapper
+			.y-circle
+			form(action="/")
+				.basket-wrapper-parameters
+					span Наименование
+					span Кол-во
+					span Цена
+					span Удалить
+				.basket-wrapper-items
+					.ordered-item
+						.ordered-item-card
+							img(src=require('../img/bike.png'))
+							a(href="#") Трехколесный велосипед Puky Fitsch (Пуки Фитч)
+							span Арт: CS-10-001GL
+						.ordered-item-amount
+							.amount-add
+							input(type="text" value="1")
+							.amount-remove
+						.ordered-item-price
+							span 5790р.
+						.ordered-item-delete
+							.trash
+					.ordered-item
+						.ordered-item-card
+							img(src=require('../img/bike.png'))
+							a(href="#") Трехколесный велосипед Puky Fitsch (Пуки Фитч)
+							span Арт: CS-10-001GL
+						.ordered-item-amount
+							.amount-add
+							input(type="text" value="1")
+							.amount-remove
+						.ordered-item-price
+							span 5790р.
+						.ordered-item-delete
+							.trash
+				.basket-wrapper-total
+					span.total-text Итого:
+					span.total-numb 11580 руб.
+				.basket-wrapper-order
+					button Оформить заказ
+
+
+	include blocks/footer.pug
+
+	include includes/scripts.pug

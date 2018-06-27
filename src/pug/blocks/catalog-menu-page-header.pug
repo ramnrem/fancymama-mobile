@@ -1,6 +1,6 @@
 header
 	.container
-		.row.justify-content-between
+		.row.justify-content-between.icon-margin
 			.col-2
 				.menu-btn
 					img(src=require('../../img/menu.svg'))
@@ -10,8 +10,16 @@ header
 						div.basket-icon
 							span.js-basket-item 3
 		.row
-			.col-12
+			.col-2.no-r-padding
+				a(href="catalog.html")
+					.back-arrow
+						a(href="catalog.html")
+							img(src=require('../../img/back_arrow.svg'))
+			.col-8.no-l-padding
 				form.search(action="/")
 					input.search-btn(type="submit" value=" ")
 					input.search-input(type="text" placeholder="Поиск по сайту")
+			.col-2.no-l-padding
+				.filter-link
+					a(href="filter.html") Фильтр
 include sub-blocks/menu.pug
