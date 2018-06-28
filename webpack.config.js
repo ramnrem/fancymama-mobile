@@ -18,8 +18,8 @@ let conf = {
 	],
 	output: {
 		path: path.resolve(__dirname, './dist'),
-		filename: 'js/main.js',
-		// filename: '../../fancy-mama.loc/public_html/common/htdocs/mobile/js/main.js',
+		filename: 'main.js',
+		/*publicPath: 'dist/'*/
 	},
 	watch: true,
 	module: {
@@ -46,7 +46,7 @@ let conf = {
             },
 			{
 				test: /\.scss$/, 
-				use: ExtractStyle.extract({
+				use: ExtractTextPlugin.extract({
 					fallback: 'style-loader',
 					use: [
 						{
@@ -76,27 +76,26 @@ let conf = {
 				test: /\.html$/,
 				use: ['html-loader']
 			},
-			
+
 
 			{
 				test: /\.(png|jpe?g|svg)$/, 
 				use: [{
 					loader: 'file-loader',
-					options: { 
+					options: {
 						name: '[name].[ext]',
 						outputPath: 'img/',
 						// outputPath: '../../fancy-mama.loc/public_html/common/htdocs/mobile/img/',
 						publicPath: 'img/'
 					}
-				}]
+				]
+				
 			},
-
-
 			{
 				test: /\.(woff(2)?|ttf|eot|otf)(\?v=\d+\.\d+\.\d+)?$/,
 				use: [{
 					loader: 'file-loader',
-					options: { 
+					options: {
 						name: '[name].[ext]',
 						outputPath: 'fonts/',
 						// outputPath: '../../fancy-mama.loc/public_html/common/htdocs/mobile/fonts/',
@@ -149,9 +148,6 @@ let conf = {
 		})
 	]
 };
-
-
-
 
 module.exports = (env, options) => {
 	
