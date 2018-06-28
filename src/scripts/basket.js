@@ -24,4 +24,5 @@ $('.card-buy a').on('click', function(){
 
 	basketCount++;
 	$(".js-basket-item").text(basketCount);
+	return false;
 });
