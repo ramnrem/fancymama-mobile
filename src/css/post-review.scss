@@ -11,48 +11,52 @@
 	.star {
 		color: red;
 	}
-	.post-review-form {
-		font-size: 0.9rem;
-		label {
+}
+.post-review-form {
+	font-size: 0.9rem;
+	max-width: 460px;
+	margin: 0 auto;
+	label {
+		width: 100%;
+		color: $purple;
+		input {
+			padding: 3px;
+			font-size: 0.7rem;
 			width: 100%;
 			color: $purple;
-			input {
-				padding: 3px;
-				font-size: 0.7rem;
-				width: 100%;
-				color: $purple;
-				outline: none;
-				border: 1px solid $purple;
-				&[type="textarea"] {
-					height: 100px;
-				}
-			}
-		}
-		.img-wrap {
+			outline: none;
 			border: 1px solid $purple;
-			text-align: center;
-			margin-bottom: 8px;
-			img {
-				margin: 5px;
+			&[type="textarea"] {
+				height: 100px;
 			}
-		}
-		button {
-			width: 100%;
-			border: none;
-			border-radius: 15px;
-			background-color: $purple;
-			color: #fff;
-			text-transform: uppercase;
 		}
 	}
-	.form-alert {
-		font-size: 0.8rem;
-		p {
-			margin: 10px 0 0 0;
+	.img-wrap {
+		border: 1px solid $purple;
+		text-align: center;
+		margin-bottom: 8px;
+		img {
+			margin: 5px;
 		}
-		a {
-			color: $purple;
-			text-decoration: underline;
-		}
+	}
+	button {
+		width: 100%;
+		border: none;
+		border-radius: 15px;
+		background-color: $purple;
+		color: #fff;
+		text-transform: uppercase;
+	}
+}
+.form-alert {
+	max-width: 460px;
+	margin: 0 auto;
+	font-size: 0.8rem;
+	p {
+		margin: 10px 0 0 0;
+	}
+	a {
+		color: $purple;
+		text-decoration: underline;
 	}
 }

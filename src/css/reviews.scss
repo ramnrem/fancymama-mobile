@@ -17,7 +17,7 @@
 		}
 		.reviews-title {
 			a {
-				text-decoration: none;
+				text-decoration: none !important;
 				text-decoration-color: $purple;
 				&:hover {
 					text-decoration: underline;
@@ -34,17 +34,19 @@
 			}
 		}
 		.post-reviews {
-			text-align: center;
-			a {
+			text-align: right;
+			.post-reviews-btn {
+				display: inline-block;
+				cursor: pointer;
 				font: {
 					size: 14px;
 					family: Arial;
 				}
 
-				line-height: 1;
 				color: $purple;
+				line-height: 1.8;
 				&:hover {
-					color:#65A601;
+					color: #65A601;
 				}
 			}
 		}

@@ -11,6 +11,7 @@
 @import 'basket.scss';
 @import 'product-card.scss';
 @import 'filter.scss';
+@import 'window.scss';
 
 body {
 	font-family: 'Comfortaa', cursive;
@@ -28,4 +29,10 @@ body {
 	.no-padding {
 		padding: 0;
 	}
+}
+body.open{
+	overflow: hidden;
+}
+.nolink{
+	text-decoration: none !important;
 }

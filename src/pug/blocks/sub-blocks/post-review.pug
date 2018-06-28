@@ -1,34 +1,30 @@
-#js-post-review.menu-bg
-	.menu-wrapper
-		.menu-back
-			button.back-btn
-				img(src=require('../../../img/back_arrow.svg'))
-			span Оставить отзыв
-		.container
-			.row
-				.col-9
-					.post-review-form
-						form(action="/")
-							label Имя:
-								span.star *
-								input(type="text" required)
-							label Email:
-								span.star *
-								input(type="email" required)
-							label Ваш комментарий:
-								span.star *
-								input(type="textarea" required)
-							label Введите код с картинки:
-								input(type="text" required)
-							.img-wrap
-								img(src="https://fancy-mama.ru/common/htdocs/captcha/?1391770397&key=comment")
-							button Отправить
-				.col-12
-					.form-alert
-						p Поля, помеченные 
-							span.star * 
-							| обязательны для заполнения.
-						span Нажимая на кнопку "Отправить" я даю согласие на 
-							a(href="#") обработку персональных данных.
+.window
+	.window-head
+		button.back-btn(onclick="window.popup.close();")
+			img(src=require('../../../img/back_arrow.svg'))
+		span Оставить отзыв
+	.window-body
+		.post-review-form
+			form(action="/")
+				label Имя:
+					span.star *
+					input(type="text" required)
+				label Email:
+					span.star *
+					input(type="email" required)
+				label Ваш комментарий:
+					span.star *
+					input(type="textarea" required)
+				label Введите код с картинки:
+					input(type="text" required)
+				.img-wrap
+					img(src="https://fancy-mama.ru/common/htdocs/captcha/?1391770397&key=comment")
+				button Отправить
+		.form-alert
+			p Поля, помеченные
+				span.star *
+				| обязательны для заполнения.
+			span Нажимая на кнопку "Отправить" я даю согласие на
+				a(href="#") обработку персональных данных.
 
 
