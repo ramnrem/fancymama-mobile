@@ -2,13 +2,33 @@ import noUiSlider from 'nouislider';
 import 'nouislider/distribute/nouislider.css';
 
 
+let params = [
+	{
+		min: 500,
+		max: 20000
+	},
+	{
+		min: 1,
+		max: 15
+	},
+	{
+		min: 1,
+		max: 14
+	},
+	{
+		min: 20,
+		max: 100
+	}
+]
+
+
 $('.nouislider').each((i)=>{
 	noUiSlider.create($('.nouislider')[i], {
-		start: [ 500, 4000 ],
+		start: [ params[i].min, params[i].max ],
 		connect: true,
 		range: {
-			'min': [ 0 ],
-			'max': [ 10000 ]
+			'min': params[i].min,
+			'max': params[i].max 
 		}
 	});
 	$('.nouislider')[i].noUiSlider.on('update', function( values, handle ) {
@@ -21,11 +41,10 @@ $('.nouislider').each((i)=>{
 			$('.from')[i].value = Math.round(value);
 		}
 	});
-
-
 });
 
 
+//не знаю как оптимизировать этот код, т.к $('.test')[идентификатор].change не работает
 $('.price-to').change(function(){
 	$('.nouislider')[0].noUiSlider.set([this.value, null]);
 });
